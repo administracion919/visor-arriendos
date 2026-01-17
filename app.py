@@ -14,9 +14,15 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # --- CARGAR DATOS ---
-# REEMPLAZA ESTO CON TU ID DE GOOGLE SHEET
-# Reemplaza '0' por el número que sale al final de tu link donde dice gid=...
-gid = "898190509" 
+# --- CARGAR DATOS ---
+
+# 1. PEGA AQUÍ TU ID (La parte larga de letras y números)
+sheet_id = "1nnjC9NUteYImRbxBeAgcY3ORdzvuI5MUhV_lnUxauNo"
+
+# 2. PEGA AQUÍ EL GID (El número cortito al final del link, ej: 0 o 12345)
+gid = "898190509"
+
+# Esta es la línea que estaba fallando porque le faltaba el sheet_id de arriba
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid={gid}"
 
 
@@ -107,5 +113,6 @@ if df is not None:
 else:
 
     st.error("No se pudo cargar la base de datos. Revisa el link de Google Sheets.")
+
 
 
