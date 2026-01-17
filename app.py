@@ -16,7 +16,7 @@ st.markdown("""
 # --- CARGAR DATOS ---
 # REEMPLAZA ESTO CON TU ID DE GOOGLE SHEET
 sheet_id = "1nnjC9NUteYImRbxBeAgcY3ORdzvuI5MUhV_lnUxauNo" 
-sheet_name = "Hoja 3" 
+sheet_name = "Hoja3" 
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
 @st.cache_data
@@ -106,3 +106,4 @@ if df is not None:
 else:
 
     st.error("No se pudo cargar la base de datos. Revisa el link de Google Sheets.")
+
